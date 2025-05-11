@@ -1,5 +1,5 @@
 import { formatTemperature } from "../../helpers"
-import { Weather } from "../../hooks/useWeather"
+import { Weather } from "../../types/indes"
 import styles from './WeatherDetail.module.css'
 
 type WeatherDetailProps = {
