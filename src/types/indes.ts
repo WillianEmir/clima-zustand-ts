@@ -1,18 +1,6 @@
-export type Search = {
-  city: string
-  country: string
-}
+import { z } from "zod"
+import { SchemaCountry, SchemaSearch, SchemaWeather } from "../schemas"
 
-export type Country = {
-  code: string
-  name: string
-}
-
-export type Weather = {
-  name: string
-  main: {
-    temp: number
-    temp_max: number
-    temp_min: number
-  }
-}
+export type Search = z.infer<typeof SchemaSearch>
+export type Country = z.infer<typeof SchemaCountry>
+export type Weather = z.infer<typeof SchemaWeather>
